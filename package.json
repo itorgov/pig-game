@@ -1,0 +1,26 @@
+{
+  "name": "pig-game",
+  "version": "1.0.0",
+  "description": "Pig is a simple dice game written with \"vanilla\" JavaScript ES6 and CSS3.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --ignore=**/.git/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itorgov/pig-game.git"
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "css3",
+    "pig",
+    "game"
+  ],
+  "author": "Ivan Torgov <likecod@gmail.com> (https://itorgov.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itorgov/pig-game/issues"
+  },
+  "homepage": "https://pig-game.itorgov.com"
+}

@@ -92,15 +92,6 @@ class PigGame {
         this.addListeners();
     }
 
-    preloadDiceImages() {
-        const images = [];
-
-        for (let number = 1; number <= 6; number++) {
-            images[number] = new Image();
-            images[number].src = `/img/dice-${number}.svg`;
-        }
-    }
-
     addListeners() {
         this.domNewGameButton.addEventListener('click', () => {
             this.start();
@@ -231,9 +222,22 @@ class PigGame {
         this.domHoldButton.disabled = false;
     }
 
+    getDiceImageUrlFor(number) {
+        return `img/dice-${number}.svg`;
+    }
+
+    preloadDiceImages() {
+        const images = [];
+
+        for (let number = 1; number <= 6; number++) {
+            images[number] = new Image();
+            images[number].src = this.getDiceImageUrlFor(number);
+        }
+    }
+
     showDice(number) {
         this.domDice.classList.remove('d-none');
-        this.domDice.src = `/img/dice-${number}.svg`;
+        this.domDice.src = this.getDiceImageUrlFor(number);
     }
 
     hideDice() {
