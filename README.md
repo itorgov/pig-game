@@ -29,7 +29,7 @@ Just install it globally (if you haven't done it yet) :
 
     npm install -g live-server
 
-The just run the game by running this command in the root folder of this project:
+Then just run the game by running this command in the root folder of this project:
 
     npm start
 
