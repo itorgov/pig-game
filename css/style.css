@@ -134,7 +134,7 @@ body {
     transition: margin 0.3s;
 }
 
-.btn:hover:not(.btn:disabled) .btn__icon {
+.btn:hover:not(:disabled) .btn__icon {
     margin-right: 1.5rem;
 }
 

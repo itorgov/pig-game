@@ -88,7 +88,17 @@ class PigGame {
             throw new Error('Not enough players!');
         }
 
+        this.preloadDiceImages();
         this.addListeners();
+    }
+
+    preloadDiceImages() {
+        const images = [];
+
+        for (let number = 1; number <= 6; number++) {
+            images[number] = new Image();
+            images[number].src = `/img/dice-${number}.svg`;
+        }
     }
 
     addListeners() {
