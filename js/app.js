@@ -68,7 +68,8 @@ class Player {
 
 class PigGame {
     constructor(finalScore = 100, namesOfPlayers = []) {
-        this.domDice = document.getElementById('dice');
+        this.domDice = document.querySelector('.dice');
+        this.domDiceImage = document.querySelector('.dice__image > use');
         this.domNewGameButton = document.getElementById('btn-new-game');
         this.domOpenRulesButton = document.getElementById('btn-open-rules');
         this.domCloseRulesButton = document.getElementById('btn-close-rules');
@@ -88,7 +89,6 @@ class PigGame {
             throw new Error('Not enough players!');
         }
 
-        this.preloadDiceImages();
         this.addListeners();
     }
 
@@ -223,21 +223,12 @@ class PigGame {
     }
 
     getDiceImageUrlFor(number) {
-        return `img/dice-${number}.svg`;
-    }
-
-    preloadDiceImages() {
-        const images = [];
-
-        for (let number = 1; number <= 6; number++) {
-            images[number] = new Image();
-            images[number].src = this.getDiceImageUrlFor(number);
-        }
+        return `img/dice.svg#${number}`;
     }
 
     showDice(number) {
         this.domDice.classList.remove('d-none');
-        this.domDice.src = this.getDiceImageUrlFor(number);
+        this.domDiceImage.setAttribute('href', this.getDiceImageUrlFor(number));
     }
 
     hideDice() {

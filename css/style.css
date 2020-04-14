@@ -79,13 +79,20 @@ body {
 **********************************************/
 
 .dice {
-    height: 18%;
+    width: 10rem;
+    height: 10rem;
+    display: block;
     box-shadow: 0 10px 60px rgba(0, 0, 0, 0.10);
 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.dice__image {
+    width: 100%;
+    height: 100%;
 }
 
 /**********************************************
@@ -323,6 +330,11 @@ body {
     html {
         font-size: 50%;
     }
+
+    .dice {
+        width: 9rem;
+        height: 9rem;
+    }
 }
 
 /* 600px */
@@ -333,6 +345,11 @@ body {
 
     html {
         font-size: 43.75%;
+    }
+
+    .dice {
+        width: 8rem;
+        height: 8rem;
     }
 
     .player__name {
