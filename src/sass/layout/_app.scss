@@ -8,6 +8,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  @include bp(big-phone) {
+    background: var(--color-bg);
+  }
 }
 
 .container {
@@ -20,6 +24,11 @@ body {
 
   display: flex;
   position: relative;
+
+  @include bp(big-phone) {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .unsupported-screen {
