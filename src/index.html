@@ -7,32 +7,30 @@
 
     <title>Pig (dice game)</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="apple-touch-icon" type="image/png" href="favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" href="img/apple-touch-icon.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <meta property="og:title" content="Pig (dice game)">
     <meta property="og:description" content='Pig is one of a family of dice games described by Reiner Knizia as "jeopardy dice games". Developed by Ivan Torgov.'>
-    <meta property="og:image" content="favicon/apple-touch-icon.png">
+    <meta property="og:image" content="img/apple-touch-icon.png">
     <meta property="og:type" content="website">
 </head>
 
 <body>
 <div class="container">
     <div class="game-buttons">
-        <button class="btn" id="btn-new-game">
+        <button class="btn js__btn--new-game">
             <svg class="btn__icon">
                 <use href="img/icons.svg#new"></use>
             </svg>
             New game
         </button>
-        <button class="btn" id="btn-open-rules">
+        <button class="btn js__btn--open-rules">
             <svg class="btn__icon">
                 <use href="img/icons.svg#rules"></use>
             </svg>
@@ -40,38 +38,38 @@
         </button>
     </div>
 
-    <div class="player__panel" id="panel-0">
-        <div class="player__name" id="name-0">Player 1</div>
-        <div class="player__score" id="score-0">0</div>
+    <div class="player__panel js__panel--1">
+        <div class="player__name js__name--1">Player 1</div>
+        <div class="player__score js__score--1">0</div>
         <div class="player__current-box">
             <div class="player__current-label">Turn total</div>
-            <div class="player__current-score" id="current-0">0</div>
+            <div class="player__current-score js__current-score--1">0</div>
         </div>
     </div>
 
-    <div class="player__panel" id="panel-1">
-        <div class="player__name" id="name-1">Player 2</div>
-        <div class="player__score" id="score-1">0</div>
+    <div class="player__panel js__panel--2">
+        <div class="player__name js__name--2">Player 2</div>
+        <div class="player__score js__score--2">0</div>
         <div class="player__current-box">
             <div class="player__current-label">Turn total</div>
-            <div class="player__current-score" id="current-1">0</div>
+            <div class="player__current-score js__current-score--2">0</div>
         </div>
     </div>
 
-    <div class="dice d-none">
+    <div class="dice absolute-center d-none js__dice">
         <svg class="dice__image">
             <use href="img/dice.svg#5"></use>
         </svg>
     </div>
 
     <div class="play-buttons">
-        <button class="btn d-none" id="btn-roll">
+        <button class="btn d-none js__btn--roll">
             <svg class="btn__icon">
                 <use href="img/icons.svg#roll"></use>
             </svg>
             Roll dice
         </button>
-        <button class="btn d-none" id="btn-hold">
+        <button class="btn d-none js__btn--hold">
             <svg class="btn__icon">
                 <use href="img/icons.svg#hold"></use>
             </svg>
@@ -79,8 +77,8 @@
         </button>
     </div>
 
-    <div class="rules d-none" id="rules">
-        <button class="btn rules__btn-close" id="btn-close-rules">&times;</button>
+    <div class="rules d-none js__rules">
+        <button class="btn rules__close js__btn--close-rules">&times;</button>
         <h1 class="rules__title">The Pig Game</h1>
         <h2 class="rules__subtitle">Rules</h2>
         <div class="rules__text">
@@ -99,11 +97,9 @@
     </div>
 </div>
 
-<div class="unsupported_screen">
+<div class="unsupported-screen">
     Your screen is too small.<br>
     If you use a mobile device then try to rotate it to landscape mode.
 </div>
-
-<script src="js/app.js"></script>
 </body>
 </html>

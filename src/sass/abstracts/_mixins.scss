@@ -1,0 +1,19 @@
+@mixin bp($point) {
+  $bp-big-phone: "(max-width: 50em)"; // 800px
+  $bp-medium-phone: "(max-width: 37.5em)"; // 600px
+  $bp-small-phone: "(max-width: 31.25em)"; // 500px
+
+  @if $point == big-phone {
+    @media only screen and #{$bp-big-phone} {
+      @content;
+    }
+  } @else if $point == medium-phone {
+    @media only screen and #{$bp-medium-phone} {
+      @content;
+    }
+  } @else if $point == small-phone {
+    @media only screen and #{$bp-small-phone}  {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+:root {
+  --color-primary: #eb4d4d;
+  --color-bg: #fff;
+  --color-bg-active: #f7f7f7;
+  --color-bg-winner: var(--color-bg-active);
+  --text-color: #555;
+
+  --player-panel-padding: 10rem;
+
+  @include bp(big-phone) {
+    --player-panel-padding: 6rem;
+  }
+
+  @include bp(medium-phone) {
+    --player-panel-padding: 4rem;
+  }
+}
