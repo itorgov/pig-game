@@ -16,24 +16,30 @@ The first player to score 100 or more points wins.
 ## Motivation
 
 I developed it just for fun when I was playing with manipulating DOM directly.
-Also, in this project I tried classes those introduced in JavaScript ES6.
+Also, in this project I used classes and modules those introduced in JavaScript ES6.
+
+## Demo
+
+You can play this game on my web server.
+Just open [pig-game.itorgov.com](https://pig-game.itorgov.com) in your browser.
 
 ## Installation
 
-This game built without CSS preprocessor and any JavaScript Bundler.
-So, if you want run this game on your local machine then just open the `index.html` file in you browser and it will work.
-There is only one issue with this way - SVG icons won't work.
-To make them work you have to run this game on a web server.
-For example, you can use [live-server](https://www.npmjs.com/package/live-server).
-Just install it globally (if you haven't done it yet) :
+### Web server
 
-    npm install -g live-server
+For installation just copy all files from the `dist` directory to your web server.
 
-The just run the game by running this command in the root folder of this project:
+### Local machine
 
-    npm start
+You can't just open the `index.html` file in your browser because SVG icons won't work.
+So, if you want run this game on your local machine and you don't have an installed web server on it then you can use the webpack-dev-server.
 
-The game will opened at http://127.0.0.1:8080 in your default browser.
+Run the game by running these commands in the root folder of this project:
+
+    yarn
+    yarn start
+
+The game will opened at http://localhost:8080 in your default browser.
 
 ## Authors
 
